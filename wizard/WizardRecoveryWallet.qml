@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2018, The Monero Project
 // 
 // All rights reserved.
@@ -29,7 +29,7 @@
 
 import QtQuick 2.2
 import QtQuick.Dialogs 1.2
-import LokiComponents.Wallet 1.0
+import BeldexComponents.Wallet 1.0
 import QtQuick.Layouts 1.1
 import 'utils.js' as Utils
 
