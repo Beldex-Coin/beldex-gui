@@ -8,6 +8,7 @@ moc_*
 *.o
 *.mak
 *.build
+.vscode
 *.xcodeproj
 beldex-wallet-gui_plugin_import.cpp
 beldex-wallet-gui_qml_plugin_import.cpp
