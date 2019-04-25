@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2018, The Monero Project
 // 
 // All rights reserved.
@@ -38,7 +38,7 @@ import "../js/Utils.js" as Utils
 
 
 import "../components"
-import LokiComponents.Clipboard 1.0
+import BeldexComponents.Clipboard 1.0
 
 Rectangle {
     property bool viewOnly: false
@@ -571,15 +571,15 @@ Rectangle {
             }
 
             TextBlock {
-                id: guiLokiVersion
+                id: guiBeldexVersion
                 font.pixelSize: 14
-                text: qsTr("Embedded Loki version: ") + translationManager.emptyString
+                text: qsTr("Embedded Beldex version: ") + translationManager.emptyString
             }
 
             TextBlock {
                 font.pixelSize: 14
                 font.bold: true
-                text: Version.GUI_LOKI_VERSION + translationManager.emptyString
+                text: Version.GUI_BELDEX_VERSION + translationManager.emptyString
             }
 
             TextBlock {

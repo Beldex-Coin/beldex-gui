@@ -32,7 +32,7 @@ import QtQuick.Controls 2.0
 import QtQuick.Dialogs 1.2
 
 import "../../version.js" as Version
-import "../../components" as LokiComponents
+import "../../components" as BeldexComponents
 
 
 Rectangle {
@@ -54,12 +54,12 @@ Rectangle {
             columns: 2
             columnSpacing: 0
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 font.pixelSize: 14
                 text: qsTr("GUI version: ") + translationManager.emptyString
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 font.pixelSize: 14
                 text: Version.GUI_VERSION + " (Qt " + qtRuntimeVersion + ")" + translationManager.emptyString
             }
@@ -69,8 +69,8 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -78,19 +78,19 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
-            LokiComponents.TextBlock {
-                id: guiLokiVersion
+            BeldexComponents.TextBlock {
+                id: guiBeldexVersion
                 font.pixelSize: 14
-                text: qsTr("Embedded Loki Version: ") + translationManager.emptyString
+                text: qsTr("Embedded Beldex Version: ") + translationManager.emptyString
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 font.pixelSize: 14
-                text: Version.GUI_LOKI_VERSION + translationManager.emptyString
+                text: Version.GUI_BELDEX_VERSION + translationManager.emptyString
             }
 
             Rectangle {
@@ -98,8 +98,8 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -107,24 +107,24 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: qsTr("Wallet path: ") + translationManager.emptyString
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 Layout.fillWidth: true
                 Layout.maximumWidth: 360
                 font.pixelSize: 14
                 text: {
                     var wallet_path = walletPath();
                     if(isIOS)
-                        wallet_path = lokiAccountsDir + wallet_path;
+                        wallet_path = beldexAccountsDir + wallet_path;
                     return wallet_path;
                 }
             }
@@ -134,8 +134,8 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -143,18 +143,18 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 id: restoreHeight
                 font.pixelSize: 14
                 textFormat: Text.RichText
                 text: (typeof currentWallet == "undefined") ? "" : qsTr("Wallet creation height: ") + translationManager.emptyString
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 id: restoreHeightText
                 Layout.fillWidth: true
                 textFormat: Text.RichText
@@ -215,8 +215,8 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
             Rectangle {
@@ -224,17 +224,17 @@ Rectangle {
                 Layout.topMargin: 2 * scaleRatio
                 Layout.bottomMargin: 2 * scaleRatio
                 Layout.fillWidth: true
-                color: LokiComponents.Style.dividerColor
-                opacity: LokiComponents.Style.dividerOpacity
+                color: BeldexComponents.Style.dividerColor
+                opacity: BeldexComponents.Style.dividerOpacity
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: qsTr("Wallet log path: ") + translationManager.emptyString
             }
 
-            LokiComponents.TextBlock {
+            BeldexComponents.TextBlock {
                 Layout.fillWidth: true
                 font.pixelSize: 14
                 text: walletLogPath
@@ -249,7 +249,7 @@ Rectangle {
 
             Rectangle {
                 id: rectCopy
-                color: LokiComponents.Style.buttonBackgroundColor
+                color: BeldexComponents.Style.buttonBackgroundColor
                 width: btnCopy.width + 40
                 height: 24
 
@@ -257,8 +257,8 @@ Rectangle {
                     id: btnCopy
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.horizontalCenter: parent.horizontalCenter
-                    color: LokiComponents.Style.defaultFontColor
-                    font.family: LokiComponents.Style.fontRegular.name
+                    color: BeldexComponents.Style.defaultFontColor
+                    font.family: BeldexComponents.Style.fontRegular.name
                     font.pixelSize: 14 * scaleRatio
                     font.bold: true
                     text: qsTr("Copy To Clipboard") + translationManager.emptyString
@@ -270,12 +270,12 @@ Rectangle {
                     onClicked: {
                         var data = "";
                         data += "GUI Version: " + Version.GUI_VERSION + " (Qt " + qtRuntimeVersion + ")";
-                        data += "\nEmbedded Loki Version: " + Version.GUI_LOKI_VERSION;
+                        data += "\nEmbedded Beldex Version: " + Version.GUI_BELDEX_VERSION;
                         data += "\nWallet Path: ";
 
                         var wallet_path = walletPath();
                         if(isIOS)
-                            wallet_path = lokiAccountsDir + wallet_path;
+                            wallet_path = beldexAccountsDir + wallet_path;
                         data += wallet_path;
 
                         data += "\nWallet Creation Height: ";

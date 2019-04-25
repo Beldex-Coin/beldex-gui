@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2018, The Monero Project
 //
 // All rights reserved.
@@ -34,13 +34,13 @@ import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
 
 import "../components"
-import LokiComponents.Clipboard 1.0
-import LokiComponents.Wallet 1.0
-import LokiComponents.WalletManager 1.0
-import LokiComponents.TransactionHistory 1.0
-import LokiComponents.TransactionHistoryModel 1.0
-import LokiComponents.Subaddress 1.0
-import LokiComponents.SubaddressModel 1.0
+import BeldexComponents.Clipboard 1.0
+import BeldexComponents.Wallet 1.0
+import BeldexComponents.WalletManager 1.0
+import BeldexComponents.TransactionHistory 1.0
+import BeldexComponents.TransactionHistoryModel 1.0
+import BeldexComponents.Subaddress 1.0
+import BeldexComponents.SubaddressModel 1.0
 import "../js/TxUtils.js" as TxUtils
 
 Rectangle {

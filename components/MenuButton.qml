@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2018, The Monero Project
 // 
 // All rights reserved.
@@ -29,7 +29,7 @@
 
 import QtQuick 2.5
 
-import "../components" as LokiComponents
+import "../components" as BeldexComponents
 
 Rectangle {
     id: button
@@ -105,7 +105,7 @@ Rectangle {
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.right
             anchors.leftMargin: 8 * scaleRatio
-            font.family: LokiComponents.Style.fontMedium.name
+            font.family: BeldexComponents.Style.fontMedium.name
             font.bold: true
             font.pixelSize: 16 * scaleRatio
             color: "#FFFFFF"

@@ -2,7 +2,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0
 
-import "." as LokiComponents
+import "." as BeldexComponents
 
 Rectangle {
     id: root
@@ -14,7 +14,7 @@ Rectangle {
 
     color: "#09FFFFFF"
     radius: 4
-    border.color: LokiComponents.Style.inputBorderColorInActive
+    border.color: BeldexComponents.Style.inputBorderColorInActive
     border.width: 1
     
     signal linkActivated;
@@ -39,8 +39,8 @@ Rectangle {
         TextArea {
             id: content
             Layout.fillWidth: true
-            color: LokiComponents.Style.defaultFontColor
-            font.family: LokiComponents.Style.fontRegular.name
+            color: BeldexComponents.Style.defaultFontColor
+            font.family: BeldexComponents.Style.fontRegular.name
             font.pixelSize: root.fontSize
             horizontalAlignment: TextInput.AlignLeft
             selectByMouse: false

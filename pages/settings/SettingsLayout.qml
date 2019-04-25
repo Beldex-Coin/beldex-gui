@@ -33,7 +33,7 @@ import QtQuick.Dialogs 1.2
 
 import "../../js/Utils.js" as Utils
 import "../../js/Windows.js" as Windows
-import "../../components" as LokiComponents
+import "../../components" as BeldexComponents
 
 Rectangle {
     color: "transparent"
@@ -51,7 +51,7 @@ Rectangle {
         anchors.topMargin: 0
         spacing: 0
 
-        LokiComponents.CheckBox {
+        BeldexComponents.CheckBox {
             visible: !isMobile
             id: customDecorationsCheckBox
             checked: persistentSettings.customDecorations
@@ -59,7 +59,7 @@ Rectangle {
             text: qsTr("Custom decorations") + translationManager.emptyString
         }
 
-        LokiComponents.TextBlock {
+        BeldexComponents.TextBlock {
             visible: isMobile
             font.pixelSize: 14
             textFormat: Text.RichText

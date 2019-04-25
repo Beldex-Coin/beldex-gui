@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2015, The Monero Project
 //
 // All rights reserved.
@@ -30,7 +30,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
-import "../components" as LokiComponents
+import "../components" as BeldexComponents
 
 Item {
     id: inlineButton
@@ -53,7 +53,7 @@ Item {
 
     Rectangle {
         id: rect
-        color: LokiComponents.Style.buttonBackgroundColor
+        color: BeldexComponents.Style.buttonBackgroundColor
         height: 28 * scaleRatio
         width: inlineText.width + 22 * scaleRatio
 
@@ -62,7 +62,7 @@ Item {
 
         Text {
             id: inlineText
-            font.family: LokiComponents.Style.fontBold.name
+            font.family: BeldexComponents.Style.fontBold.name
             font.bold: true
             font.pixelSize: 16 * scaleRatio
             color: "white"
@@ -78,11 +78,11 @@ Item {
             onClicked: doClick()
 
             onEntered: {
-                rect.color = LokiComponents.Style.buttonBackgroundColorHover
+                rect.color = BeldexComponents.Style.buttonBackgroundColorHover
             }
 
             onExited: {
-                rect.color = LokiComponents.Style.buttonBackgroundColor
+                rect.color = BeldexComponents.Style.buttonBackgroundColor
             }
         }
     }

@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2018, The Monero Project
 // 
 // All rights reserved.
@@ -29,7 +29,7 @@
 
 import QtQuick 2.0
 
-import "../components" as LokiComponents
+import "../components" as BeldexComponents
 
 Item {
     id: item
@@ -216,7 +216,7 @@ Item {
             }
         }
 
-        LokiComponents.StandardButton {
+        BeldexComponents.StandardButton {
             id: button
             anchors.top: parent.top
             anchors.bottom: parent.bottom

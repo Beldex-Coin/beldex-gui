@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2015, The Monero Project
 //
 // All rights reserved.
@@ -29,7 +29,7 @@
 
 import QtQuick 2.0
 
-import "../components" as LokiComponents
+import "../components" as BeldexComponents
 
 Label {
     id: item
@@ -41,8 +41,8 @@ Label {
         anchors.left: parent.left
         anchors.right: parent.right
         height: 2
-        color: LokiComponents.Style.dividerColor
-        opacity: LokiComponents.Style.dividerOpacity
+        color: BeldexComponents.Style.dividerColor
+        opacity: BeldexComponents.Style.dividerOpacity
     }
 
     MouseArea {
