@@ -1,11 +1,11 @@
 import QtQuick 2.0
 
-import "../components" as LokiComponents
+import "../components" as BeldexComponents
 
 TextEdit {
-    color: LokiComponents.Style.defaultFontColor
-    font.family: LokiComponents.Style.fontRegular.name
-    selectionColor: LokiComponents.Style.dimmedFontColor
+    color: BeldexComponents.Style.defaultFontColor
+    font.family: BeldexComponents.Style.fontRegular.name
+    selectionColor: BeldexComponents.Style.dimmedFontColor
     wrapMode: Text.Wrap
     readOnly: true
     selectByMouse: true

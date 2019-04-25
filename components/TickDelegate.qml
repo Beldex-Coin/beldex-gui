@@ -1,4 +1,4 @@
-// Copyright (c) 2018, The Loki Project
+// Copyright (c) 2019, The Beldex Project
 // Copyright (c) 2014-2018, The Monero Project
 // 
 // All rights reserved.
@@ -29,7 +29,7 @@
 
 import QtQuick 2.0
 
-import "../components" as LokiComponents
+import "../components" as BeldexComponents
 
 Item {
     id: delegateItem
@@ -53,7 +53,7 @@ Item {
             font.family: "Arial"
             font.bold: true
             font.pixelSize: 12 * scaleRatio
-            color: LokiComponents.Style.defaultFontColor
+            color: BeldexComponents.Style.defaultFontColor
             text: {
                 if(currentIndex === 0) return qsTr("Default") + translationManager.emptyString
                 if(currentIndex === 13) return qsTr("High") + translationManager.emptyString

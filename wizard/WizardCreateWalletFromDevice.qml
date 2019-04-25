@@ -27,8 +27,8 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import QtQuick 2.2
-import LokiComponents.WalletManager 1.0
-import LokiComponents.Wallet 1.0
+import BeldexComponents.WalletManager 1.0
+import BeldexComponents.Wallet 1.0
 import QtQuick.Layouts 1.1
 import QtQuick.Dialogs 1.2
 import 'utils.js' as Utils

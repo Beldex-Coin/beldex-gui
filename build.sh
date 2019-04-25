@@ -70,8 +70,8 @@ fi
 source ./utils.sh
 pushd $(pwd)
 ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-LOKI_DIR=loki
-LOKID_EXEC=lokid
+BELDEX_DIR=beldex
+BELDEXD_EXEC=beldexd
 
 MAKE='make'
 if [[ $platform == *bsd* ]]; then
@@ -98,9 +98,9 @@ if [ "$ANDROID" != true ] && ([ "$platform" == "linux32" ] || [ "$platform" == "
 fi
 
 if [ "$platform" == "darwin" ]; then
-    BIN_PATH=$BIN_PATH/loki-wallet-gui.app/Contents/MacOS/
+    BIN_PATH=$BIN_PATH/beldex-wallet-gui.app/Contents/MacOS/
 elif [ "$platform" == "mingw64" ] || [ "$platform" == "mingw32" ]; then
-    LOKID_EXEC=lokid.exe
+    BELDEXD_EXEC=beldexd.exe
 fi
 
 # force version update
@@ -108,25 +108,25 @@ git fetch --tags --force
 get_tag
 echo "var GUI_VERSION = \"$TAGNAME\"" > version.js
 
-pushd "$LOKI_DIR"
+pushd "$BELDEX_DIR"
 get_tag
 popd
-echo "var GUI_LOKI_VERSION = \"$TAGNAME\"" >> version.js
+echo "var GUI_BELDEX_VERSION = \"$TAGNAME\"" >> version.js
 
 cd build
-$QMAKE ../loki-wallet-gui.pro "$CONFIG" || exit
+$QMAKE ../beldex-wallet-gui.pro "$CONFIG" || exit
 $MAKE || exit 
 
-# Copy lokid to bin folder
+# Copy beldexd to bin folder
 if [ "$platform" != "mingw32" ] && [ "$ANDROID" != true ]; then
-cp ../$LOKI_DIR/bin/$LOKID_EXEC $BIN_PATH
+cp ../$BELDEX_DIR/bin/$BELDEXD_EXEC $BIN_PATH
 fi
 
 make deploy
 popd
 
-cp loki_default_settings.ini build/$BIN_PATH/loki.ini
+cp beldex_default_settings.ini build/$BIN_PATH/beldex.ini
 
 if [ "$platform" == "darwin" ]; then
-    otool -l build/$BIN_PATH/loki-wallet-gui | grep sdk
+    otool -l build/$BIN_PATH/beldex-wallet-gui | grep sdk
 fi
