@@ -120,8 +120,8 @@ QVariant TransactionHistoryModel::data(const QModelIndex &index, int role) const
     case TransactionIsOutRole:
         result = tInfo->direction() == TransactionInfo::Direction_Out;
         break;
-    case TransactionIsServiceNodeRewardRole:
-        result = tInfo->isServiceNodeReward();
+    case TransactionIsMasterNodeRewardRole:
+        result = tInfo->isMasterNodeReward();
         break;
     case TransactionIsMinerRewardRole:
         result = tInfo->isMinerReward();
@@ -167,7 +167,7 @@ QHash<int, QByteArray> TransactionHistoryModel::roleNames() const
     roleNames.insert(TransactionTimeStampRole, "timeStamp");
     roleNames.insert(TransactionPaymentIdRole, "paymentId");
     roleNames.insert(TransactionIsOutRole, "isOut");
-    roleNames.insert(TransactionIsServiceNodeRewardRole, "isServiceNodeReward");
+    roleNames.insert(TransactionIsMasterNodeRewardRole, "isMasterNodeReward");
     roleNames.insert(TransactionIsMinerRewardRole, "isMinerReward");
     roleNames.insert(TransactionDateRole, "date");
     roleNames.insert(TransactionTimeRole, "time");

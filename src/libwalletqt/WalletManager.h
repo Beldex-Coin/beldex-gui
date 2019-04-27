@@ -107,7 +107,7 @@ public:
 
     Q_INVOKABLE bool paymentIdValid(const QString &payment_id) const;
     Q_INVOKABLE bool addressValid(const QString &address, NetworkType::Type nettype) const;
-    Q_INVOKABLE bool serviceNodePubkeyValid(const QString &address) const;
+    Q_INVOKABLE bool masterNodePubkeyValid(const QString &address) const;
     Q_INVOKABLE bool keyValid(const QString &key, const QString &address, bool isViewKey, NetworkType::Type nettype) const;
 
     Q_INVOKABLE QString paymentIdFromAddress(const QString &address, NetworkType::Type nettype) const;
