@@ -35,7 +35,7 @@ public:
         TransactionPaymentIdRole,
         // extra role (alias) for TransactionDirectionRole (as UI currently wants just boolean "out")
         TransactionIsOutRole,
-        TransactionIsServiceNodeRewardRole,
+        TransactionIsMasterNodeRewardRole,
         TransactionIsMinerRewardRole,
         // extra roles for date and time (as UI wants date and time separately)
         TransactionDateRole,
