@@ -191,7 +191,7 @@
         <file>pages/Sign.qml</file>
         <file>pages/Transfer.qml</file>
         <file>pages/TxKey.qml</file>
-        <file>pages/ServiceNode.qml</file>
+        <file>pages/MasterNode.qml</file>
         <file>pages/settings/Settings.qml</file>
         <file>pages/settings/SettingsWallet.qml</file>
         <file>pages/settings/SettingsNode.qml</file>

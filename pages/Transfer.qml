@@ -209,7 +209,7 @@ Rectangle {
                 Address <font size='2'></font><a href='#'>(Address Book)</a><font size='2'></font>")
                 + translationManager.emptyString
               labelButtonText: qsTr("Resolve") + translationManager.emptyString
-              placeholderText: "L.."
+              placeholderText: "b.."
               wrapMode: Text.WrapAnywhere
               addressValidation: true
               onInputLabelLinkActivated: { appWindow.showPageRequest("AddressBook") }
