@@ -1,4 +1,4 @@
 [submodule "beldex"]
 	path = beldex
 	url = https://github.com/Beldex-Coin/beldex
-	branch = master
+	branch = dev
