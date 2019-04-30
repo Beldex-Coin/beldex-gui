@@ -59,11 +59,11 @@ Rectangle {
         Label {
             id: signTitleLabel
             fontSize: 24 * scaleRatio
-            text: qsTr("Service Node") + translationManager.emptyString
+            text: qsTr("Master Node") + translationManager.emptyString
         }
 
         Text {
-            text: qsTr("This page allows you to create a Service Node, or to stake to an existing Service Node") + translationManager.emptyString
+            text: qsTr("This page allows you to create a Master Node, or to stake to an existing Master Node") + translationManager.emptyString
             wrapMode: Text.Wrap
             Layout.fillWidth: true
             font.family: Style.fontRegular.name
@@ -73,10 +73,10 @@ Rectangle {
 
         /// TODO: draw red borders when service node key is invalid
         LineEdit {
-            labelText: qsTr("Service Node Key") + translationManager.emptyString
-            id: getServiceNodeKey
+            labelText: qsTr("Master Node Key") + translationManager.emptyString
+            id: getMasterNodeKey
             fontSize: 16 * scaleRatio
-            placeholderText: qsTr("Paste Service Node Key") + translationManager.emptyString
+            placeholderText: qsTr("Paste Master Node Key") + translationManager.emptyString
             readOnly: false
             Layout.fillWidth: true
             copyButton: true
@@ -130,14 +130,14 @@ Rectangle {
 
                   var address_ok = walletManager.addressValid(getRewardAddress.text, appWindow.persistentSettings.nettype);
 
-                  var sn_pub_key = walletManager.serviceNodePubkeyValid(getServiceNodeKey.text);
+                  var sn_pub_key = walletManager.masterNodePubkeyValid(getMasterNodeKey.text);
 
                   if (!address_ok || !sn_pub_key) return false;
 
                   return true;
               }
               onClicked: {
-                  currentWallet.stake(getServiceNodeKey.text, getRewardAddress.text, getAmount.text);
+                  currentWallet.stake(getMasterNodeKey.text, getRewardAddress.text, getAmount.text);
               }
         }
 

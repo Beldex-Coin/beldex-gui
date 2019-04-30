@@ -58,8 +58,8 @@ ListView {
             + translationManager.emptyString;
     }
 
-    function getColorFromRewardType(isServiceNodeReward, isMinerReward) {
-        if (isServiceNodeReward) {
+    function getColorFromRewardType(isMasterNodeReward, isMinerReward) {
+        if (isMasterNodeReward) {
             return "#cccc00";
         } else if (isMinerReward) {
             return "#ff9900";
@@ -165,7 +165,7 @@ ListView {
                 text: {
                   var base = isOut ? qsTr("Sent") : qsTr("Received");
 
-                  if (isServiceNodeReward) {
+                  if (isMasterNodeReward) {
                       base += qsTr(" (service node reward)");
                   } else if (isMinerReward) {
                       base += qsTr(" (miner reward)");
@@ -196,7 +196,7 @@ ListView {
 
                     return _amount + " BELDEX";
                 }
-                color: isOut ? "white" : getColorFromRewardType(isServiceNodeReward, isMinerReward)
+                color: isOut ? "white" : getColorFromRewardType(isMasterNodeReward, isMinerReward)
             }
 
             Rectangle {

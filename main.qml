@@ -76,7 +76,7 @@ ApplicationWindow {
     property bool remoteNodeConnected: false
     property bool androidCloseTapped: false;
     // Default daemon addresses
-    readonly property string localDaemonAddress : persistentSettings.nettype == NetworkType.MAINNET ? "localhost:22023" : persistentSettings.nettype == NetworkType.TESTNET ? "localhost:38157" : "localhost:38154"
+    readonly property string localDaemonAddress : persistentSettings.nettype == NetworkType.MAINNET ? "localhost:19091" : persistentSettings.nettype == NetworkType.TESTNET ? "localhost:29091" : "localhost:39091"
     property string currentDaemonAddress;
     property bool startLocalNodeCancelled: false
     property int estimatedBlockchainSize: 50 // GB
@@ -141,8 +141,8 @@ ApplicationWindow {
             else if(middlePanel.state === "Receive") middlePanel.state = "History"
             else if(middlePanel.state === "History") middlePanel.state = "Mining"
             else if(middlePanel.state === "Mining") middlePanel.state = "TxKey"
-            else if(middlePanel.state === "TxKey") middlePanel.state = "ServiceNode"
-            else if(middlePanel.state === "ServiceNode") middlePanel.state = "SharedRingDB"
+            else if(middlePanel.state === "TxKey") middlePanel.state = "MasterNode"
+            else if(middlePanel.state === "MasterNode") middlePanel.state = "SharedRingDB"
             else if(middlePanel.state === "SharedRingDB") middlePanel.state = "Sign"
             else if(middlePanel.state === "Sign") middlePanel.state = "Settings"
         } else if(seq === "Ctrl+Shift+Backtab" || seq === "Alt+Shift+Backtab") {
@@ -160,8 +160,8 @@ ApplicationWindow {
             */
             if(middlePanel.state === "Settings") middlePanel.state = "Sign"
             else if(middlePanel.state === "Sign") middlePanel.state = "SharedRingDB"
-            else if(middlePanel.state === "SharedRingDB") middlePanel.state = "ServiceNode"
-            else if(middlePanel.state === "ServiceNode") middlePanel.state = "TxKey"
+            else if(middlePanel.state === "SharedRingDB") middlePanel.state = "MasterNode"
+            else if(middlePanel.state === "MasterNode") middlePanel.state = "TxKey"
             else if(middlePanel.state === "TxKey") middlePanel.state = "Mining"
             else if(middlePanel.state === "Mining") middlePanel.state = "History"
             else if(middlePanel.state === "History") middlePanel.state = "Receive"
@@ -1060,7 +1060,7 @@ ApplicationWindow {
         property bool   allow_background_mining : false
         property bool   miningIgnoreBattery : true
         property var    nettype: NetworkType.MAINNET
-        property string daemon_address: nettype == NetworkType.TESTNET ? "localhost:38157" : nettype == NetworkType.STAGENET ? "localhost:38154" : "localhost:22023"
+        property string daemon_address: nettype == NetworkType.TESTNET ? "localhost:29091" : nettype == NetworkType.STAGENET ? "localhost:39091" : "localhost:19091"
         property string payment_id
         property int    restore_height : 0
         property bool   is_recovering : false
@@ -1416,8 +1416,8 @@ ApplicationWindow {
                 updateBalance();
             }
 
-            onServiceNodeClicked: {
-                middlePanel.state = "ServiceNode";
+            onMasterNodeClicked: {
+                middlePanel.state = "MasterNode";
                 middlePanel.flickable.contentY = 0;
                 if(isMobile) {
                     hideMenu();

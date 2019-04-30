@@ -572,7 +572,7 @@ qrc_qml.cpp: qml.qrc \
 		pages/Receive.qml \
 		pages/SharedRingDB.qml \
 		pages/TxKey.qml \
-		pages/ServiceNode.qml \
+		pages/MasterNode.qml \
 		pages/Mining.qml \
 		pages/settings/SettingsWallet.qml \
 		pages/settings/SettingsLayout.qml \
